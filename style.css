@@ -1,0 +1,65 @@
+/* Fondo de la página: reemplaza imagenes por tu carpeta de imágenes (ruta relativa a este archivo) */
+:root{--bg:#05020c;--panel:rgba(16,9,32,.76);--panel-2:#150c26;--line:rgba(161,0,255,.30);--accent:#a100ff;--accent-2:#c68bff;--text:#e9e4f5;--muted:#a79cc4}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text)}
+/* Fondo de toda la página: pon tu imagen en la carpeta y cambia imagenes por su nombre */
+body::before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;z-index:-1;background:url("imagenes/fondo.jpg") center top/cover no-repeat}
+section,footer{scroll-margin-top:110px}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+.border-purple{border-color:var(--accent)!important}
+.btn-outline-purple{border:1px solid var(--accent);color:var(--accent-2);background:transparent;transition:.25s}
+.btn-outline-purple:hover{background:var(--accent);color:#fff;box-shadow:0 0 30px rgba(161,0,255,.4)}
+.btn-purple{background:var(--accent);color:#fff;border:0}
+.btn-purple:hover{background:#8a00d9;color:#fff}
+/* Barra superior */
+header{position:sticky;top:0;z-index:1030}
+.navbar{background:rgba(5,2,12,.82)!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navbar-dark .navbar-nav .nav-link{color:var(--muted);letter-spacing:.06em;transition:color .2s}
+.navbar-dark .navbar-nav .nav-link:hover,.navbar-dark .navbar-nav .nav-link.active{color:#fff}
+.navbar-dark .navbar-nav .nav-link.active{text-shadow:0 0 14px rgba(161,0,255,.85)}
+.navbar-brand-text{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.5rem;color:#fff!important;letter-spacing:2px;margin-left:10px}
+.navbar-brand-text:hover{color:var(--accent-2)!important}
+/* Inicio */
+.hero-header{background:transparent!important;min-height:82vh;display:flex;align-items:center}
+.hero-header>.container{width:100%}
+.hero-title{text-shadow:0 0 50px rgba(161,0,255,.55)}
+.hero-sub{color:var(--accent-2);letter-spacing:.35em}
+.service-item{background:var(--panel)!important;border:1px solid var(--line);color:var(--text);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.service-item i{color:var(--accent)}
+.service-item p{color:var(--muted)}
+.section-title{color:var(--accent-2)}
+/* Catálogo */
+.rv-dark{background:linear-gradient(180deg,rgba(5,2,12,.3),rgba(5,2,12,.78) 16%,rgba(5,2,12,.78) 84%,rgba(5,2,12,.3));color:var(--text)}
+.rv-card{background:var(--panel);border:1px solid var(--line);color:#fff;height:100%;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.rv-card:hover{border-color:var(--accent);box-shadow:0 12px 40px rgba(161,0,255,.25)}
+.rv-card img{aspect-ratio:3/4;object-fit:cover;width:100%;border-bottom:1px solid var(--line)}
+.rv-price{color:var(--accent-2);font-family:'Orbitron',sans-serif;font-weight:800}
+.rv-track{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.25rem .25rem 1rem;scrollbar-width:none}
+.rv-track::-webkit-scrollbar{display:none}
+.rv-slide{flex:0 0 78%;scroll-snap-align:start}
+@media(min-width:576px){.rv-slide{flex-basis:calc(50% - .625rem)}}
+@media(min-width:992px){.rv-slide{flex-basis:calc(25% - .95rem)}}
+.rv-nav{position:absolute;top:40%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;padding:0;background:rgba(5,2,12,.9);border:1px solid var(--accent);color:#fff}
+.rv-nav:hover{background:var(--accent);color:#fff}
+/* Sobre nosotros */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-bottom:1.75rem}
+.about-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:.5rem;border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.55)}
+.about-grid img:nth-child(even){transform:translateY(1.75rem)}
+.about-title span{color:var(--accent)}
+.about-text{color:var(--muted)}
+/* Pie de página */
+.footer{background:rgba(5,2,12,.84)!important;border-top:1px solid var(--line);color:var(--text)}
+.footer .btn-social{width:40px;height:40px;border-radius:50%;border:1px solid var(--accent);color:var(--accent-2);display:inline-flex;align-items:center;justify-content:center;padding:0}
+.footer .btn-social:hover{background:var(--accent);color:#fff}
+.footer a.tel-link{color:inherit;text-decoration:none}
+/* Carrito y admin */
+.offcanvas.bg-dark,.modal-content.bg-dark{background-color:#0d0718!important;border:1px solid var(--line)}
+.form-control.bg-dark,.form-select.bg-dark{background-color:var(--panel-2)!important;color:#fff}
+.form-control.bg-dark::placeholder{color:#8f84ad}
+.form-control.bg-dark:focus,.form-select.bg-dark:focus{box-shadow:0 0 0 .2rem rgba(161,0,255,.25);border-color:var(--accent)}
+input[type=date]{color-scheme:dark}
+select option{background:#150c26;color:#fff}
+.cart-badge{position:absolute;top:-6px;right:-6px;font-size:.7rem}
+.adm-thumb{width:44px;height:56px;object-fit:cover;border-radius:4px}
+@media(max-width:768px){.navbar-brand-text{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv-track{scroll-behavior:auto}}

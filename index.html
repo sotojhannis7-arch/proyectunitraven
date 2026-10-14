@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAVEN STORE | Ropa Urbana</title>
+<!-- FAVICON: reemplaza imagenes por tu carpeta -->
+<link rel="icon" type="image/png" href="imagenes/favicon.png">
+
+<!-- Fuentes e iconos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- TU CSS: style.css debe estar en la MISMA carpeta que este index.html -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header>
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 sticky-top">
+  <a href="#inicio" class="navbar-brand p-0 d-flex align-items-center">
+    <!-- LOGO: escribe tu carpeta en lugar de imagenes -->
+    <img src="imagenes/logo.jpg" alt="Raven Store" width="70" height="70" class="rounded-circle border border-purple">
+    <span class="navbar-brand-text">RAVEN STORE</span>
+  </a>
+  <div class="d-flex align-items-center ms-auto order-lg-last gap-2">
+    <button class="btn btn-outline-purple position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-label="Ver mi reserva">
+      <i class="fas fa-shopping-bag"></i><span id="cartCount" class="badge rounded-pill bg-danger cart-badge">0</span>
+    </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ms-auto py-0 pe-4">
+      <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li class="nav-item"><a href="#catalogo" class="nav-link">Catálogo</a></li>
+      <li class="nav-item"><a href="#nosotros" class="nav-link">Sobre nosotros</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<!-- ==================== INICIO ==================== -->
+<section id="inicio" class="py-5 hero-header mb-0">
+  <div class="container my-5 py-5">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h1 class="display-1 hero-title animate__animated animate__slideInDown">RAVEN STORE</h1>
+        <p class="hero-sub animate__animated animate__slideInUp mt-4">BENOND ORDINARY</p>
+        <a href="#catalogo" class="btn btn-outline-purple btn-lg mt-4 px-5" style="border-radius:0">Ver catálogo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-xxl py-5">
+  <div class="container"><div class="row g-4">
+    <div class="col-lg-3 col-sm-6"><div class="service-item rounded p-4 text-center h-100"><i class="bi bi-bag display-1 mb-3"></i><h3>Alta Calidad</h3><p>Tejidos premium que resisten el paso del tiempo y mantienen su estilo.</p></div></div>
+    <div class="col-lg-3 col-sm-6"><div class="service-item rounded p-4 text-center h-100"><i class="bi bi-cursor-fill display-1 mb-3"></i><h3>Envíos Express</h3><p>Recibe tu pedido en 24/48h con seguimiento en tiempo real.</p></div></div>
+    <div class="col-lg-3 col-sm-6"><div class="service-item rounded p-4 text-center h-100"><i class="bi bi-arrow-up display-1 mb-3"></i><h3>Streetwear</h3><p>Las últimas tendencias urbanas, desde oversized hasta cortes minimalistas.</p></div></div>
+    <div class="col-lg-3 col-sm-6"><div class="service-item rounded p-4 text-center h-100"><i class="bi bi-shield-check display-1 mb-3"></i><h3>Compra Segura</h3><p>Pagos encriptados y protección total de tus datos.</p></div></div>
+  </div></div>
+</section>
+
+<!-- ==================== CATÁLOGO ==================== -->
+<section id="catalogo" class="rv-dark py-5">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+      <div><h5 class="section-title text-start fw-normal mb-1">Catálogo</h5><h2 class="mb-0">Elige tu prenda y resérvala</h2></div>
+      
+    </div>
+    <div class="position-relative">
+      <button class="btn btn-dark border-purple rv-nav" style="left:-8px" data-slide="-1" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+      <button class="btn btn-dark border-purple rv-nav" style="right:-8px" data-slide="1" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+      <div id="grid" class="rv-track"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOBRE NOSOTROS ==================== -->
+<section id="nosotros" class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><div class="about-grid">
+        <!-- FOTOS: reemplaza imagenes por el nombre de tu carpeta -->
+        <img src="imagenes/nosotros1.jpg" alt="Modelo con chamarra negra reflectiva" loading="lazy">
+        <img src="imagenes/nosotros2.jpg" alt="Modelo con chamarra roja y pantalón negro" loading="lazy">
+        <img src="imagenes/nosotros3.jpg" alt="Modelo con sudadera roja" loading="lazy">
+        <img src="imagenes/nosotros4.jpg" alt="Modelo con chamarra roja" loading="lazy">
+      </div></div>
+      <div class="col-lg-6">
+        <h5 class="section-title text-start fw-normal">Sobre Raven</h5>
+        <h1 class="about-title mb-4">Moda <span>Oscura</span> & Urbana</h1>
+        <p class="about-text mb-4">Raven Store es una tienda virtual que nació del sueño de dos jóvenes que querian demostrar que la edad no es un limite para emprender. Ambos compartian la pasion por la moda y el deseo de crear una marca de identidad propia, donde cada prenda reflejara confianza, autencididad y estilo.</p>
+        <p class="about-text mb-4">Desde sudaderas con capucha hasta accesorios minimalistas, nuestra colección está pensada para construir un armario con personalidad propia. Oscuro, elegante y siempre adelantado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto" class="container-fluid footer pt-5 mt-5">
+  <div class="container py-4">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <h4 class="section-title text-start fw-normal mb-4">Contacto</h4>
+        <p class="mb-2"><i class="fas fa-map-marker-alt me-3" style="color:#a100ff"></i>Oruro, Bolivia - Zona Central</p>
+        <p class="mb-2"><i class="fas fa-phone-alt me-3" style="color:#a100ff"></i><a class="tel-link" href="tel:+59172317516">+591 72317516</a><br><span style="margin-left:2.1rem"></span><a class="tel-link" href="tel:+59163662566">+591 63662566</a></p>
+        <p class="mb-2"><i class="fas fa-envelope me-3" style="color:#a100ff"></i>ravenstore7777@gmail.com</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4 class="section-title text-start fw-normal mb-4">Síguenos</h4>
+        <div class="d-flex pt-2">
+          <a href="https://www.facebook.com/share/19h4J627Cs/" target="_blank" rel="noopener noreferrer" class="btn btn-social me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/r4ven.store_777?stkn=d2JpcXVhMGp2aWhs" target="_blank" rel="noopener noreferrer" class="btn btn-social me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@r4ven.store_7.77" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <h4 class="section-title text-start fw-normal mb-4">Horario</h4>
+        <p class="mb-2"><strong>Lun - Sáb:</strong> 10:00 – 20:00</p>
+        <p class="mb-2"><strong>Dom:</strong> Cerrado</p>
+        <p class="mt-3"><i class="bi bi-truck me-2" style="color:#a100ff"></i>Envíos a todo el país</p>
+      </div>
+    </div>
+  </div>
+  <div class="container border-top border-secondary pt-4 pb-3">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start"><p class="mb-0">&copy; 2026 <a href="#inicio" style="color:#a100ff">Raven Store</a>. Todos los derechos reservados.</p></div>
+      <div class="col-md-6 text-center text-md-end"><a href="#" id="adminLink" class="text-secondary text-decoration-none"><i class="bi bi-lock-fill me-1"></i>Admin</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== CARRITO ==================== -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+  <div class="offcanvas-header border-bottom border-secondary">
+    <h5 class="offcanvas-title" id="cartTitle">Mi reserva</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="flex-grow-1"></div>
+    <div class="border-top border-secondary pt-3">
+      <div class="d-flex justify-content-between mb-3"><strong>Total</strong><span id="cartTotal" class="rv-price">Bs 0</span></div>
+      <input id="cName" class="form-control bg-dark text-white border-purple mb-2" placeholder="Tu nombre (solo letras)" maxlength="40" autocomplete="name">
+      <input id="cPhone" class="form-control bg-dark text-white border-purple mb-2" placeholder="Tu celular (solo números)" inputmode="numeric" maxlength="8" autocomplete="tel-national">
+      <select id="cLugar" class="form-select bg-dark text-white border-purple mb-2" aria-label="Lugar de entrega"><option value="">Lugar de entrega</option></select>
+      <div class="row g-2 mb-3">
+        <div class="col-6"><input id="cFecha" type="date" class="form-control bg-dark text-white border-purple" aria-label="Fecha de entrega"></div>
+        <div class="col-6"><select id="cHora" class="form-select bg-dark text-white border-purple" aria-label="Hora de entrega"></select></div>
+      </div>
+      <button id="checkout" class="btn btn-purple w-100 py-2">Confirmar reserva por WhatsApp</button>
+      <div id="cartMsg" class="small text-danger mt-2"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ADMIN ==================== -->
+<div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title" id="adminTitle">Panel de administrador</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div id="adLogin" class="mx-auto" style="max-width:340px">
+          <label for="adPass" class="form-label">Contraseña</label>
+          <input id="adPass" type="password" class="form-control bg-dark text-white border-purple mb-2">
+          <button id="adEnter" class="btn btn-purple w-100">Entrar</button>
+          <div id="adErr" class="small text-danger mt-2"></div>
+        </div>
+        <div id="adPanel" class="d-none">
+          <ul class="nav nav-tabs mb-3">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabProd">Productos</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabRes">Reservas <span id="resCount" class="badge bg-danger"></span></button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabProd">
+              <form id="pf" class="row g-2 mb-4">
+                <input type="hidden" id="pId">
+                <div class="col-md-4"><input id="pNombre" class="form-control bg-dark text-white" placeholder="Nombre" required></div>
+                <div class="col-6 col-md-2"><input id="pPrecio" type="text" inputmode="decimal" maxlength="7" class="form-control bg-dark text-white" placeholder="Precio (Bs)" required></div>
+                <div class="col-6 col-md-2"><input id="pStock" type="text" inputmode="numeric" maxlength="4" class="form-control bg-dark text-white" placeholder="Stock" required></div>
+                <div class="col-md-4"><input id="pTallas" class="form-control bg-dark text-white" placeholder="Tallas: S,M,L,XL" maxlength="30"></div>
+                <div class="col-md-5"><input id="pImg" class="form-control bg-dark text-white" placeholder="Imagen: imagenes/prenda.png" required></div>
+                <div class="col-md-5"><input id="pDesc" class="form-control bg-dark text-white" placeholder="Descripción corta"></div>
+                <div class="col-md-2 d-flex gap-2"><button class="btn btn-purple flex-fill" id="pSave">Guardar</button><button type="button" class="btn btn-outline-light" id="pCancel" title="Cancelar edición">✕</button></div>
+              </form>
+              <button type="button" class="btn btn-sm btn-outline-light mb-3" id="expProd">Descargar productos.json (para publicar el catálogo)</button>
+              <div class="table-responsive"><table class="table table-dark align-middle mb-0"><thead><tr><th></th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Tallas</th><th></th></tr></thead><tbody id="adProds"></tbody></table></div>
+            </div>
+            <div class="tab-pane fade" id="tabRes">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-sm btn-outline-light" id="expJson">Descargar respaldo (JSON)</button>
+                <button class="btn btn-sm btn-outline-light" id="expCsv">Reservas en CSV</button>
+              </div>
+              <div id="adRes"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS (van al final del body) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- TU JAVASCRIPT: script.js debe estar en la MISMA carpeta que este index.html -->
+<script src="script.js"></script>
+</body>
+</html>
